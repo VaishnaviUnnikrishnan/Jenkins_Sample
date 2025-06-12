@@ -1,9 +1,6 @@
 pipeline {
-    agent {
-        node {
-            label 'docker-agent-python' // Ensure this label matches your Jenkins node
-        }
-    }
+    agent any
+
 
     triggers {
         pollSCM('* * * * *') // Polls the repo every minute
